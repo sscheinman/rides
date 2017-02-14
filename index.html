@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal" <a href="#" data-panel="left">Menu</a>
+      <div class="content-block">
+        <p>Profile</p>
+        <p><a href="#" class="close-panel">Close Me</a></p> 
+      </div>
+    </div>
+
+    <div class="login-screen modal-in">
+      <!-- Default view-page layout -->
+      <div class="view">
+        <div class="page">
+          <!-- page-content has additional login-screen content -->
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Sign In</div>
+
+            <!-- Login form -->
+            <form>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Username</div>
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="Username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <a href="#" class="item-link list-button">Sign In</a>
+                  </li>
+                </ul>
+                <div class="list-block-label">Some text with login information.
+                <p><a href="#" class="close-login-screen">Close Login Screen</a></p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          <div class="center">Rides!</div>
+        </div>
+      </div> 
+
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+      <div class="pages navbar-through toolbar-through">
+        <!-- Page, data-page contains page name-->
+         <div data-page="index" class="page">
+           <!-- Scrollable page content-->
+           <div class="page-content">
+             <div class="swiper-container">
+               <div class="swiper-wrapper">
+                 <div class="swiper-slide"><span>Home</span>
+                   <div class="content-block-title">Book a Ride</div>
+                     <div class="content-block">
+                       <div class="content-block-inner">
+                        <p>Heading to the airport?</p>
+                        <p>No problem! Use this app to solve all of your transportation needs.</p>
+                        <div class="content-block">
+                          <p><a href="#" class="ac-1">Departure or Return to Campus?</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="swiper-slide"><span>Book Ride</span>
+                  <div class="list-block">
+                    <ul>
+                      <li> 
+                      <!-- Smart select, will be opened in Picker -->
+                        <a href="#" class="item-link smart-select" data-open-in="picker" data-back-on-select="true">
+                          <select name="Airport">
+                            <option value="GSO">(GSO) Greensboro</option>
+                            <option value="CLT">(CLT) Charlotte</option>
+                            <option value="RDU">(RDU) Raleigh-Durham</option>
+                          </select>
+                        <div class="item-content">
+                          <div class="item-inner">
+                          <!-- Select label -->
+                            <div class="item-title">Airport</div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+              <li>
+              <!-- Smart select, will be opened in Picker with custom height -->
+              <a href="#" class="item-link smart-select" data-open-in="picker" data-back-on-select="true">
+                <select name="fruits">
+                        <option value="apple" selected>Apple</option>
+                        <option value="pineapple">Pineapple</option>
+          
+                      </select>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <!-- Select label -->
+                        <div class="item-title">Fruit</div>
+                          <!-- Selected value, not required -->
+                          <div class="item-after">Apple</div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                
+                
+              </ul>
+              
+
+              <div class="content-block-title">Inline Picker / Date-time</div>
+<div class="content-block">
+ <div style="padding:0; margin-right:-15px; width:auto" class="content-block-inner">
+   <div style="margin:0" class="list-block">
+     <ul style="border-top:none">
+       <li>
+         <div class="item-content">
+           <div class="item-inner">
+             <div class="item-input">
+               <input type="text" placeholder="Date Time" readonly id="picker-date">
+             </div>
+           </div>
+         </div>
+       </li>
+     </ul>
+   </div>
+   <div id="picker-date-container"></div>
+   
+ </div>
+
+</div>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide"><span>Calendar</span>
+
+          <div class="content-block-title">Inline with custom toolbar</div>
+            <div class="content-block">
+              <div style="padding:0; margin-right:-15px; width:auto" class="content-block-inner">
+                <div id="calendar-inline-container"></div>
+              </div>
+            </div>  
+
+          </div>
+          
+          <div class="swiper-slide"><span>Other</span>
+            <div class="content-block-title">Navigation</div>
+              <div class="list-block">
+                <ul>
+                  <li><a href="about.html" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="services.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="form.html" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Form</div>
+                        </div>
+                      </div></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
